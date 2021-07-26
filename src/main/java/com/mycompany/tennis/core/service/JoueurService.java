@@ -15,10 +15,14 @@ public class JoueurService {
     public void createJoueur(Joueur joueur){
         joueurRepository.create(joueur);
 
+
     }
-        public void getJoueur(long id){
-            this.joueurRepository.getById(id);
+        public Joueur getJoueur(long id){
+
+        return joueurRepository.getById(id);
         }
+
+
 
 
 }

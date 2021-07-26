@@ -23,7 +23,7 @@ public class MatchRepositoryImpl {
             conn = dataSource.getConnection();
 
             //lire les données
-            PreparedStatement preparedstatement=conn.prepareStatement("INSERT INTO MATCH_TENNIS ( ID_EPREUVE, ID_VAINQUEUR, ID_FINALISTE)  VALUES(?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement preparedstatement=conn.prepareStatement("INSERT INTO MATCH_TENNIS ( ID_EPREUVE, ID_VAINQUEUR, ID_FINALISTE)  VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
             preparedstatement.setLong(1, match.getEpreuve().getId());
             preparedstatement.setLong(2, match.getVainqueur().getId());

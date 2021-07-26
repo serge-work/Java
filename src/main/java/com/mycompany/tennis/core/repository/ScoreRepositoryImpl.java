@@ -28,9 +28,28 @@ public class ScoreRepositoryImpl {
             preparedstatement.setLong(1, score.getMatch().getId());
             preparedstatement.setByte(2, score.getSet_1());
             preparedstatement.setByte(3, score.getSet_2());
-            preparedstatement.setByte(4, score.getSet_3());
-            preparedstatement.setByte(5, score.getSet_4());
-            preparedstatement.setByte(6, score.getSet_5());
+
+            if (score.getSet_3()==null){
+                preparedstatement.setNull(4, Types.TINYINT);
+            }
+            else{
+                preparedstatement.setByte(4, score.getSet_3());
+            }
+
+            if (score.getSet_4()==null){
+                preparedstatement.setNull(5, Types.TINYINT);
+            }
+            else{
+                preparedstatement.setByte(5, score.getSet_4());
+            }
+
+            if (score.getSet_5()==null){
+                preparedstatement.setNull(6, Types.TINYINT);
+            }
+            else{
+                preparedstatement.setByte(6, score.getSet_4());
+            }
+
 
 
             preparedstatement.executeUpdate();

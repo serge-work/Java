@@ -1,5 +1,7 @@
 package com.mycompany.tennis.core.entity;
 
+import java.io.ByteArrayInputStream;
+
 public class Score {
     private Long id;
     private Byte set_1;
